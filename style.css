@@ -13,7 +13,7 @@ html {
   .footer,
   .header {
     height: 11rem;
-    background-color: #42ddf5;
+    background-color: #ec42f5;
     border: 0.1rem solid #4b2582;
     border-radius: 0.5rem;
   }
@@ -28,7 +28,7 @@ html {
     font-size: 5.5vw;
     text-align: center;
     margin: auto;
-    color: #ee560f;
+    color: #f74d58;
     margin-top: 2rem;
   }
   
