@@ -2,7 +2,7 @@
 var btnTranslate = document.querySelector('#btn-translate');
 
 //get the input
-var txtInput = document.querySelector('#text-input');
+var txtInput = document.querySelector('#txt-input');
 
 //get the output
 var outputDiv = document.querySelector('#output');
