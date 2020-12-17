@@ -1,20 +1,37 @@
-document.querySelector('#translate').addEventListener('click',translate);
+var btnTranslate = document.querySelector("#btn-translate");
+var txtInput = document.querySelector("#txt-input");
+var outputDiv = document.querySelector("#output");
 
 
 
-function translate(){
-    let input = document.querySelector('.text').value
-    let output = document.querySelector('.minion')
-    
-    if(input === ''){
-        alert('Enter the any text')
-    }
-    else{
-       var url = 'https://api.funtranslations.com/translate/klingon.json'+input;
-      fetch(url).
-      then(response => response.json()).
-      then(json => output.value = json['contents']['translated'] )
+var serverURL = "https://api.funtranslations.com/translate/klingon.json"
 
 
-    }
+function getTranslationURL(input) {
+    return serverURL + "?text=" + input
 }
+
+function errorHandler(error) {
+    console.log("Opps occured", error);
+    alert("Something wrong with server! Try again after some time")
+}
+
+
+function clickHandler() {
+    var inputText = txtInput.value;
+
+    if (inputText === "") {
+        outputDiv.innerText = "Please enter your desired text on above text field"
+    } else {
+        outputDiv.innerText = ""
+        fetch(getTranslationURL(inputText))
+            .then(response => response.json())
+            .then(json => {
+                var translatedText = json.contents.translated;
+                outputDiv.innerText = translatedText; // output
+            })
+            .catch(errorHandler)
+    }
+};
+
+btnTranslate.addEventListener("click", clickHandler)
