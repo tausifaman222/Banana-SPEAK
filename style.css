@@ -12,7 +12,7 @@ html {
   .footer,
   .header {
     height: 11rem;
-    background-color: #79cf40;
+    
     border: 0.1rem solid #4b2582;
     border-radius: 0.5rem;
   }
