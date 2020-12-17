@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+    body {
+        margin: 0px;
+        width: 100%;
+        height: auto;
+        font-family: 'Great Vibes', cursive;
+        background-image: url('https://i.pinimg.com/564x/40/91/af/4091afbcffb653952d28043277742a21.jpg');
+        background-repeat:no-repeat ;
+        
+       
+    }
+    
+    textarea {
+        width: 80%;
+        height: 20vh;
+        display: block;
+        padding: 16px;
+        margin: 20px;
+      
+    }
+    
+    button {
+        margin: 2rem;
+        padding: 0.7rem 1rem 0.7rem 1rem;
+        border-radius: 7%;
+        border: solid 1px black;
+        background-color: yellow;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    .container {
+        text-align: center;
+        max-width: 350px;
+        margin: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+       
+      
+    }
+    
+    nav {
+        height: 15vh;
+        background-color: transparent;
+        color: black;
+        text-align: center;
+       margin: 0px;
+    }
+    
+    .navbrand {
+       
+       font-weight: 800;
+        padding: 36px;
+       
+        font-size: 2rem;
+    }
+    
+    footer {
+        height: 32vh;
+        background-color: transparent;
+        color: black;
+        text-align: center;
+        padding-top: 2rem;
+        padding:2rem;
+        font-size: 1.6rem;
+    }
+    
+    textarea::placeholder {
+        font-weight: 900;
+        text-align: center;
+        padding: 40px;
+        text-decoration: bold;
+    }
+    footer header
+    {
+        font-size: 2rem;
+        font-weight: 800;
+        
+    }
