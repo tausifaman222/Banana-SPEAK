@@ -96,8 +96,8 @@ html {
   }
 .img-hello1 {
     display: block;
-    position: right;
-    right : 0px;
+    position: relative;
+    right : 10px;
     top: -280px;
     height: 200%;
     max-width: 30%;
