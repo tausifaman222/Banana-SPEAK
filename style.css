@@ -5,8 +5,7 @@ html {
   body {
     margin: 0;
     padding: 0;
-    
-    background-image: url("image/a-b-sfondo-minions.jpg");
+    background-image: url("images/a-b-sfondo-minions.jpg");
     
   }
   
@@ -85,6 +84,7 @@ html {
   
   .copy {
     margin: 0;
+    font-size: 150%;
   }
   
   .img-hello {
