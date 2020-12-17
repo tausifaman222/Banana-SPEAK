@@ -4,7 +4,7 @@ var outputDiv = document.querySelector("#output");
 
 
 
-var serverURL = "https://api.funtranslations.com/translate/minion.json";
+var serverUrl = "https://api.funtranslations.com/translate/minion.json"
 
 
 function getTranslationURL(input) {
