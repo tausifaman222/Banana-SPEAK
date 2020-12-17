@@ -1,0 +1,97 @@
+html {
+    font-size: 10px;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #a5d6a7;
+    height: 10vh;
+  }
+  
+  .footer,
+  .header {
+    height: 11rem;
+    background-color: #43a047;
+    border: 0.1rem solid #4b2582;
+    border-radius: 0.5rem;
+  }
+  
+  .header {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  
+  .header h2 {
+    font-size: 5.5vw;
+    text-align: center;
+    margin: auto;
+    color: #a5d6a7;
+    margin-top: 2rem;
+  }
+  
+  .header img {
+    display: inline-block;
+    height: 8rem;
+    position: relative;
+    top: 1rem;
+    left: auto;
+  }
+  
+  textarea {
+    display: block;
+    margin: 1rem;
+    padding: 1rem;
+    height: 24.1vh;
+    width: 50%;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    resize: none;
+  }
+  
+  button {
+    border: 0.2rem solid #4b2582;
+    border-radius: 0.5rem;
+    width: 12rem;
+    height: 4rem;
+    font-size: 2rem;
+  }
+  
+  button:hover {
+    background-color: #a5d6a7;
+    font-weight: bolder;
+  }
+  
+  .footer {
+    font-size: 1.5rem;
+    color: #a5d6a7;
+    padding: 0.4rem;
+  }
+  
+  .github,
+  .linkedin,
+  .twitter,
+  .mail {
+    width: 3vmax;
+    height: 3vmax;
+    margin: 0rem 1rem;
+  }
+  
+  .connect {
+    margin: 0.8rem;
+  }
+  
+  .copy {
+    margin: 0;
+  }
+  
+  .img-hello {
+    display: block;
+    position: relative;
+    left: 10px;
+    top: -280px;
+    height: 180%;
+    max-width: 20%;
+  }
