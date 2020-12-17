@@ -16,7 +16,7 @@ html {
   }
   
   .header {
-      text-align: center;
+     
     position: relative;
     top: 0;
     left: 0;
@@ -57,7 +57,7 @@ html {
     border-radius: 0.5rem;
     font-size: 2rem;
     resize: none;
-      text-align: center;
+     
   }
   
   button {
