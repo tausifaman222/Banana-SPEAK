@@ -1,37 +1,31 @@
-var btnTranslate = document.querySelector("#btn-translate");
-var txtInput = document.querySelector("#txt-input");
-var outputDiv = document.querySelector("#output");
+const inputText = document.querySelector('#input-text')
+const outputText = document.querySelector('#output-text')
+const btnTranslate = document.querySelector('button')
 
+var serverURL = "https://api.funtranslations.com/translate/minion.json";
 
-
-var serverUrl = "https://api.funtranslations.com/translate/minion.json"
-
-
-function getTranslationURL(input) {
-    return serverURL + "?text=" + input
+function getTraslationURL(text){
+    return serverURL + "?text=" + text;
 }
 
-function errorHandler(error) {
-    console.log("Opps occured", error);
-    alert("Something wrong with server! Try again after some time")
+function errorHandler(err){
+    console.log(err);
+    alert("Server issue ..cannot  translate right now 😞");
 }
 
+function clickHandler(){
+    var textInput = inputText.value
+    var url = getTraslationURL(textInput);
+    
+    fetch(url)
+    .then(response => response.json())
+    .then(json => showTranslation(json))
+    .catch(errorHandler)
+}
 
-function clickHandler() {
-    var inputText = txtInput.value;
+function showTranslation(json){
+    var translatedText = json.contents.translated;
+    outputText.innerText = translatedText;
+}
 
-    if (inputText === "") {
-        outputDiv.innerText = "Please enter your desired text on above text field"
-    } else {
-        outputDiv.innerText = ""
-        fetch(getTranslationURL(inputText))
-            .then(response => response.json())
-            .then(json => {
-                var translatedText = json.contents.translated;
-                outputDiv.innerText = translatedText; // output
-            })
-            .catch(errorHandler)
-    }
-};
-
-btnTranslate.addEventListener("click", clickHandler)
+btnTranslate.addEventListener('click', clickHandler)
