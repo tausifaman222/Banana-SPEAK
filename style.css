@@ -90,8 +90,7 @@ html {
   .img-hello {
     display: block;
     position: relative;
-    left: 10px;
     top: -280px;
-    height: 180%;
-    max-width: 20%;
+    height: 160%;
+    max-width: 30%;
   }
