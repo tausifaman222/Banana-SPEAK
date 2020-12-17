@@ -5,9 +5,9 @@ html {
   body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
     background-image: url("image/a-b-sfondo-minions.jpg");
-    height: 10vh;
+    
   }
   
   .footer,
