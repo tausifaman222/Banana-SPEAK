@@ -89,7 +89,15 @@ html {
   
   .img-hello {
     display: block;
-    position: left;
+    position: relative;
+    top: -280px;
+    height: 190%;
+    max-width: 30%;
+  }
+.img-hello1 {
+    display: block;
+    position: right;
+    right : 0px;
     top: -280px;
     height: 200%;
     max-width: 30%;
