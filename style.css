@@ -37,6 +37,16 @@ html {
     top: 1rem;
     left: auto;
   }
+
+.img-hello {
+    display: block;
+    position: relative;
+    top: -280px;
+    height: 190%;
+    max-width: 30%;
+      
+  }
+
   
   textarea {
     display: block;
@@ -69,7 +79,7 @@ html {
     font-size: 2.21em;
     color: #ffffff;
     padding: 0.4rem;
-      text-align: center;
+      
   }
   
   .github,
@@ -96,6 +106,6 @@ html {
     top: -280px;
     height: 190%;
     max-width: 30%;
-      text-align: center;
+      
   }
 
