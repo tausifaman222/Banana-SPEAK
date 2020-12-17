@@ -1,31 +1,58 @@
-const inputText = document.querySelector('#input-text')
-const outputText = document.querySelector('#output-text')
-const btnTranslate = document.querySelector('button')
+//get the button
+var btnTranslate = document.querySelector('#btn-translate');
 
+//get the input
+var txtInput = document.querySelector('#text-input');
+
+//get the output
+var outputDiv = document.querySelector('#output');
+
+//get the Server URL
 var serverURL = "https://api.funtranslations.com/translate/minion.json";
 
-function getTraslationURL(text){
-    return serverURL + "?text=" + text;
+var displayBtn = document.querySelector('#display');
+
+//define translation function
+function getTranslationURL(input)
+{
+    return serverURL + "?" + "text=" + input;
+
 }
 
-function errorHandler(err){
-    console.log(err);
-    alert("Server issue ..cannot  translate right now 😞");
+//Handle Error
+function ErrorHandler(error)
+{
+    console.log('Error with the server');
+    alert('Check the server connection!');
 }
 
-function clickHandler(){
-    var textInput = inputText.value
-    var url = getTraslationURL(textInput);
-    
-    fetch(url)
-    .then(response => response.json())
-    .then(json => showTranslation(json))
-    .catch(errorHandler)
-}
-
-function showTranslation(json){
+//ClickHandler
+function clickHandler()
+{
+    //1. read the input text
+var inputText = txtInput.value;
+    //2. Go and fetch the URL
+fetch(getTranslationURL(inputText)).
+    //3. convert url into response.json
+then(response => response.json()).
+    //4. output it 
+// then(json => console.log(json.contents.translated))
+then(json =>
+{
     var translatedText = json.contents.translated;
-    outputText.innerText = translatedText;
+    outputDiv.innerText = translatedText;
+    })
+//5.Handle Error
+.catch(ErrorHandler);
 }
 
-btnTranslate.addEventListener('click', clickHandler)
+function showDiv() {
+    document.querySelector('#welcomeDiv').style.display = "block";
+
+ }
+
+
+//Call the button event 
+btnTranslate.addEventListener("click" , clickHandler);
+
+displayBtn.addEventListener("click" , showDiv);
