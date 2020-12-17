@@ -23,7 +23,7 @@ function getTranslationURL(input)
 function ErrorHandler(error)
 {
     console.log('Error with the server');
-    alert('Check the server connection!');
+    alert('Check the server connection!Too many Requests Stay calm try Again !');
 }
 
 //ClickHandler
